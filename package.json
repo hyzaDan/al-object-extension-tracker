@@ -1,7 +1,8 @@
+
 {
-  "name": "al-object-extension-tracker",
-  "displayName": "AL Object Extension Tracker",
-  "description": "Search for Business Central AL base object extensions.",
+  "name": "al-object-extension-tracker-alfatest",
+  "displayName": "AL Object Extension Tracker AlfaTest",
+  "description": "todo",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.90.0"
@@ -9,15 +10,28 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "al-object-extension-tracker.helloWorld",
+        "command": "al-object-extension-tracker-alfatest.helloWorld",
         "title": "Hello World"
-      }
-    ]
+      },
+      {
+        "command": "al-object-extension-tracker-alfatest.searchObjectExtension",
+        "title": "Search Object Extension",
+        "category": "AL Tools"
+    }
+    ],
+    "menus": {
+      "editor/context": [
+          {
+              "command": "al-object-extension-tracker-alfatest.searchObjectExtension",
+              "when": "editorLangId == 'al'",
+              "group": "navigation"
+          }
+      ]
+  }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
