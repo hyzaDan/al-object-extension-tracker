@@ -1,24 +1,28 @@
 
 {
-  "name": "al-object-extension-tracker-alfatest",
-  "displayName": "AL Object Extension Tracker AlfaTest",
+  "name": "al-object-extension-tracker",
+  "displayName": "AL Object Extension Tracker",
   "description": "todo",
   "version": "0.0.1",
   "engines": {
-    "vscode": "^1.90.0"
+    "vscode": "^1.80.0"
   },
   "categories": [
     "Other"
   ],
   "main": "./out/extension.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hyzaDan/al-object-extension-tracker"
+  },  
   "contributes": {
     "commands": [
       {
-        "command": "al-object-extension-tracker-alfatest.helloWorld",
+        "command": "al-object-extension-tracker.helloWorld",
         "title": "Hello World"
       },
       {
-        "command": "al-object-extension-tracker-alfatest.searchObjectExtension",
+        "command": "al-object-extension-tracker.searchObjectExtension",
         "title": "Search Object Extension",
         "category": "AL Tools"
     }
@@ -26,7 +30,7 @@
     "menus": {
       "editor/context": [
           {
-              "command": "al-object-extension-tracker-alfatest.searchObjectExtension",
+              "command": "al-object-extension-tracker.searchObjectExtension",
               "when": "editorLangId == 'al'",
               "group": "navigation"
           }
@@ -42,7 +46,7 @@
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.90.0",
+    "@types/vscode": "^1.80.0",
     "@types/mocha": "^10.0.6",
     "@types/node": "18.x",
     "@typescript-eslint/eslint-plugin": "^7.11.0",
