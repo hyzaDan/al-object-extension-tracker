@@ -14,13 +14,6 @@ export function activate(context: vscode.ExtensionContext) {
 	// The command has been defined in the package.json file
 	// Now provide the implementation of the command with registerCommand
 	// The commandId parameter must match the command field in package.json
-    /*
-	const disposable = vscode.commands.registerCommand('al-object-extension-tracker.helloWorld', () => {
-		// The code you place here will be executed every time your command is executed
-		// Display a message box to the user
-		vscode.window.showInformationMessage('Hello World from AL Object Extension Tracker AlfaTest!');
-	});
-    */
 
     let disposable = vscode.commands.registerCommand('al-object-extension-tracker.searchObjectExtension', () => {
         const editor = vscode.window.activeTextEditor;
@@ -32,7 +25,7 @@ export function activate(context: vscode.ExtensionContext) {
             const lineText = document.lineAt(position.line).text;
 
             // Regular expression to match Record, Page, and Report declarations
-            //TODO Upper case search
+            //TODO Upper case search        
 
             const regex = /(\w+)\s*:\s*(Record|Page|Report)\s*(?:"([^"]+)"|([a-zA-Z0-9_]+))/;
 
@@ -50,8 +43,6 @@ export function activate(context: vscode.ExtensionContext) {
                     objectName = match[4];
                     queryText =  `extends ${objectName}`;
                 }
-                //const objectName = match[3] || match[4];
-                
 
                 if (objectName) {
                     vscode.commands.executeCommand('workbench.action.findInFiles', {
@@ -60,10 +51,10 @@ export function activate(context: vscode.ExtensionContext) {
                         triggerSearch: true
                     });
                 } else {
-                    vscode.window.showErrorMessage('No valid AL object found under cursor.');
+                    vscode.window.showErrorMessage('No valid AL object (Record|Page|Report) found under cursor.');
                 }
             } else {
-                vscode.window.showErrorMessage('No valid AL object found under cursor.');
+                vscode.window.showErrorMessage('No valid AL object (Record|Page|Report) found under cursor.');
             }
         }
     });
