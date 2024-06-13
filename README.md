@@ -1,8 +1,13 @@
 # al-object-extension-tracker README
 
-Test
+Easily search for tableextensions, pageextensions and reportsextensions for a selected object in AL code.
+Just right click on the object definition and select "Find Extensions" from the context menu.
 
 ## Features
+Easily search for tableextensions, pageextensions and reportsextensions for a selected object in AL code.
+Just right click on the object definition and select "Find Extensions" from the context menu.
+
+Todo: Find all pages that uses given table or tableextension.
 
 ## Known Issues
 

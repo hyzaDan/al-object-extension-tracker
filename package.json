@@ -2,7 +2,8 @@
 {
   "name": "al-object-extension-tracker",
   "displayName": "AL Object Extension Tracker",
-  "description": "todo",
+  "description": "Easily search for tableextensions, pageextensions and reportsextensions for a selected object in AL code.",
+  "publisher": "Daniel Hyza",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.80.0"
@@ -15,6 +16,7 @@
     "type": "git",
     "url": "https://github.com/hyzaDan/al-object-extension-tracker"
   },  
+  "icon": "images/Logo.png", 
   "contributes": {
     "commands": [
       {
@@ -23,7 +25,7 @@
       },
       {
         "command": "al-object-extension-tracker.searchObjectExtension",
-        "title": "Search Object Extension",
+        "title": "Search Object Extensions",
         "category": "AL Tools"
     }
     ],

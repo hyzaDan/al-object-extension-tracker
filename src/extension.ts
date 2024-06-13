@@ -44,11 +44,11 @@ export function activate(context: vscode.ExtensionContext) {
                 const objectType = match[2];
                 if (match[3]) {
                     objectName = match[3];
-                    queryText =  `extends\\s*"${objectName}"`;
+                    queryText =  `extends "${objectName}"`;
                 }
                 else if (match[4]) {
                     objectName = match[4];
-                    queryText =  `extends\\s*${objectName}`;
+                    queryText =  `extends ${objectName}`;
                 }
                 //const objectName = match[3] || match[4];
                 
