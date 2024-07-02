@@ -20,10 +20,6 @@
   "contributes": {
     "commands": [
       {
-        "command": "al-object-extension-tracker.helloWorld",
-        "title": "Hello World"
-      },
-      {
         "command": "al-object-extension-tracker.searchObjectExtension",
         "title": "Search Object Extensions",
         "category": "AL Tools"
