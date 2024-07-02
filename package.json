@@ -4,7 +4,7 @@
   "displayName": "AL Object Extension Tracker",
   "description": "Easily search for tableextensions, pageextensions and reportsextensions for a selected object in AL code.",
   "publisher": "Daniel Hyza",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.80.0"
   },
